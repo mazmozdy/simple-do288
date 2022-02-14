@@ -4,6 +4,6 @@ COPY config/server.xml /config/
 COPY config/server.env /config/
 USER root
 RUN mkdir ./my-special-folder
-RUN chgrp -R 0 ./my-special-folder&& \
+RUN chgrp -R 0 ./my-special-folder && \
     chmod -R g=u ./my-special-folder
 COPY ./Dockerfile my-special-folder/
